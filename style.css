@@ -1,0 +1,91 @@
+/* GENERAL LAYOUT */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #f5f5f5;
+}
+
+/* SCREEN CONTAINERS */
+.screen {
+    display: none;
+    padding: 20px;
+}
+
+.screen.active {
+    display: block;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.homeIcon {
+    font-size: 28px;
+    background: none;
+    border: none;
+}
+
+/* MAIN BUTTONS */
+.bigHomeButton {
+    width: 100%;
+    padding: 18px;
+    background: #ff7a00;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* FLOATING + BUTTON — FIXED AND HIGHER TO AVOID OVERLAP */
+.floatingPlus {
+    position: fixed;
+    bottom: 90px;   /* ← augmenté pour ne plus chevaucher le bouton Home */
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: #ff7a00;
+    color: white;
+    border-radius: 50%;
+    border: none;
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;    /* ← reste au-dessus mais sans gêner */
+}
+
+/* ADD SERIAL CONTAINER — STABILISÉ */
+#addSerialContainer {
+    margin-top: 20px;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    position: relative;   /* ← empêche le conteneur de sauter */
+    z-index: 10;
+}
+
+/* INPUTS */
+input[type="text"], input[type="date"], textarea, select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* HISTORY ITEMS */
+.historyItem {
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
